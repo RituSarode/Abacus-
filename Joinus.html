@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        /* Start joinus login */
+        .join-us-form {
+            position: fixed;  /* Center the form in the viewport */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);  /* Center the element */
+            background: var(--white);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);  /* Proper shadow for box */
+            width: 35rem;
+            padding: 2rem;
+            border-radius: 0.5rem; /* Added rounded corners */
+            overflow: hidden; /* Prevent overflow for pseudo-element */
+            z-index: 1; /* Ensure the container is on top */
+        }
+
+        .join-us-form h3 {
+            font-size: 2.2rem;
+            color: var(--black);
+            text-align: center;
+            margin-bottom: .7rem;
+        }
+
+        .join-us-form .box {
+            font-size: 1.5rem;
+            margin: .7rem 0;
+            border: .1rem solid rgba(0, 0, 0, 0.1);
+            padding: 1rem 1.2rem;
+            color: var(--black);
+            width: 100%;
+        }
+
+        .join-us-form .remember {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            margin: .7rem 0;
+        }
+
+        .join-us-form label {
+            font-size: 1.5rem;
+            color: var(--black);
+            cursor: pointer;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            /* background-color: blue; */
+         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+         transform: scale(1.05);
+        }
+
+        /* Box effect on hover */
+        .btn:hover::before {
+            content: ''; /* Create an empty box */
+            position: absolute; /* Position it absolutely */
+            top: -4px; /* Position above the button */
+            left: -4px; /* Position to the left of the button */
+            right: -4px; /* Extend to the right of the button */
+            bottom: -4px; /* Extend below the button */
+            border: 2px solid rgba(0, 0, 0, 0.2); /* Border effect */
+            border-radius: 0.5rem; /* Match the border radius */
+            pointer-events: none; /* Ensure the box doesn't block pointer events */
+            transition: all 0.3s ease; /* Smooth transition for the box */
+        }
+
+        /* End joinus login */
+    </style>
+</head>
+<body class="index-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <h1 class="sitename">Abacus</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/Home.html">Home</a></li>
+                    <li class="dropdown"><a href="/index.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/Abacus.html">ABACUS</a></li>
+                            <li><a href="/VedicMaths.html">VEDIC MATHS</a></li>
+                            <li><a href="/Phonics.html">PHONICS</a></li>
+                            <li><a href="/Smartwrite.html">SMART WRITE</a></li>
+                            <li><a href="#">MAGIC TABLES</a></li>
+                            <li><a href="#">Kidzwiki</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/AboutUs.html">About Us</a></li>
+                    <li><a href="/Joinus.html">JOIN US</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                    <li><a href="/Blog.html">BLOGS</a></li>
+                    <li><a href="/Quizbyte.html">QuizByte</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+           
+        </div>
+    </header>
+
+    <form action="" class="join-us-form">
+        <h3>Join Us</h3>
+        <input type="email" placeholder="Enter your email" class="box">
+        <input type="password" placeholder="Enter your password" class="box">
+        <div class="remember">
+            <input type="checkbox" id="remember">
+            <label for="remember">Remember Me</label>
+        </div>
+         <button type="submit" class="btn">
+            <span class="text text-1">Login Now</span>
+            </button>
+    </form>
+ <!-- joinus login button -->
+    <script>
+        let joinusForm = document.querySelector('.join-us-form');
+        document.querySelector('#btn-getstarted').onclick = () => {
+            joinusForm.classList.toggle('active');
+        }
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Abacus </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+    <style>
+      body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff7f7;
+            overflow-x: hidden;
+            margin: 0;
+        }
+ 
+        .content-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: whitesmoke;
+        }
+ 
+        .slider-container {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            max-width: 800px; /* Maximum width of the slider */
+            height: 500px; /* Fixed height for the slider */
+            position: relative;
+            overflow: hidden;
+        }
+ 
+        .card {
+            position: absolute;
+            width: 100%;
+            height: 80%; /* Adjusted height for medium-sized cards */
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            opacity: 0;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            display: flex;
+            margin: auto; /* Center the card vertically */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+ 
+        .card-image {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+        }
+ 
+        .card-content {
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+ 
+        .card h3 {
+            margin: 0 0 10px;
+            color: #385892;
+            font-size: 1.6rem; /* Adjusted for better visibility */
+        }
+ 
+        .card p {
+            color: #666;
+            font-size: 1.1rem; /* Slightly larger for better readability */
+        }
+ 
+        /* Animations for cards */
+        .card:nth-child(1) {
+            animation: slideCardFromTop 25s infinite 0s; /* Slowed down */
+        }
+ 
+        .card:nth-child(2) {
+            animation: slideCardFromBottom 25s infinite 10s; /* Slowed down */
+        }
+ 
+        .card:nth-child(3) {
+            animation: slideCardFromSide 25s infinite 20s; /* Slowed down */
+        }
+ 
+        /* Keyframes for vertical sliding from the top */
+        @keyframes slideCardFromTop {
+            0%, 30% {
+                transform: translateY(-100%); /* Start above */
+                opacity: 0;
+            }
+            30%, 70% {
+                transform: translateY(0); /* Slide down into view */
+                opacity: 1;
+            }
+            70%, 100% {
+                transform: translateY(-100%); /* Move out of view */
+                opacity: 0;
+            }
+        }
+ 
+        /* Keyframes for vertical sliding from the bottom */
+        @keyframes slideCardFromBottom {
+            0%, 30% {
+                transform: translateY(100%); /* Start below */
+                opacity: 0;
+            }
+            30%, 70% {
+                transform: translateY(0); /* Slide up into view */
+                opacity: 1;
+            }
+            70%, 100% {
+                transform: translateY(100%); /* Move out of view */
+                opacity: 0;
+            }
+        }
+ 
+        /* Keyframes for sliding in from the side */
+        @keyframes slideCardFromSide {
+            0%, 30% {
+                transform: translateX(100%); /* Start from the right */
+                opacity: 0;
+            }
+            30%, 70% {
+                transform: translateX(0); /* Slide in */
+                opacity: 1;
+            }
+            70%, 100% {
+                transform: translateX(100%); /* Move out of view */
+                opacity: 0;
+            }
+        }
+    </style>
+
+
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+    
+          <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1 class="sitename">Abacus</h1>
+          </a>
+    
+          <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="/Home.html">Home</a></li>
+              <li class="dropdown"><a href="/index.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="/Abacus.html">ABACUS</a></li>
+                  <li><a href="/VedicMaths.html">VEDIC MATHS</a></li>
+                  <li><a href="/Phonics.html">PHONICS</a></li>
+                  <li><a href="/Smartwrite.html">SMART WRITE</a></li>
+                  <li><a href="#">MAGIC TABLES</a></li>
+                  <li><a href="#">Kidzwiki</a></li>
+                </ul>
+              </li>
+              <!-- <li class="dropdown"><a href="/AboutUs.html"><span>About Us</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> -->
+               
+                   <!-- <li><a href="/WhyUs.html">AboutUs </a></li>  -->
+                  <!-- <button id="whyUsBtn" class="btn">Why Us</button>  -->
+               
+     
+              
+              <li><a href="/AboutUs.html">AboutUs</a></li>
+              <li><a href="/Joinus.html">join-us  </a></li>
+              <li><a href="/Contact.html">contact</a></li>
+              <li><a href="/Blog.html">BLOGS</a></li>
+              <li><a href="/Quizbyte.html">QuizByte</a></li>
+              
+              
+              </li>
+              <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+    
+         
+    
+        </div>
+    
+      </header>
+
+    <!-- Main Content Section -->
+    <section class="content-section">
+      <div class="slider-container">
+          <div class="card" data-index="0">
+              <img class="card-image" src="/explaining-benefits.avif" alt="Card Image">
+              <div class="card-content">
+                  <h3>How to Balance Work and Family When Running a Home Business?</h3>
+                  <p>Tips for balancing family and a home business, especially for women who want to turn passions into profitable ventures.</p>
+              </div>
+          </div>
+          <div class="card" data-index="1">
+              <img class="card-image" src="/skilldeer.png" alt="Card Image">
+              <div class="card-content">
+                  <h3>Simple Strategies for Teaching Vedic Math's to Kids</h3>
+                  <p>Learn simple methods to teach Vedic Maths, enhancing the learning experience for teachers and students alike.</p>
+              </div>
+          </div>
+          <div class="card" data-index="2">
+              <img class="card-image" src="/istockphoto.jpg" alt="Card Image">
+              <div class="card-content">
+                  <h3>Benefits of Joining Abacus Kids</h3>
+                  <p>Discover the benefits of Abacus Kids, with insights from annual events and franchise experiences.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+    
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Abacus</span>
+          </a>
+          <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p> -->
+          <div class="social-links d-flex mt-4">
+            <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a> -->
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+            <!-- <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li> -->
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Top Courses</h4>
+          <ul>
+            <li><a href="#">Toddler Abacus</a></li>
+            <li><a href="#">Runner </a></li>
+            <li><a href="#">Sprinters</a></li>
+            <li><a href="#">Advance Level</a></li>
+            <li><a href="#">Grand Level</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact </h4>
+          <!-- <p>A108 Adam Street</p>
+          <p>New York, NY 535022</p>
+          <p>United States</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+          <p><strong>Email:</strong> <span>info@example.com</span></p> -->
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>How to learn Abacus at home | Best Vedik Maths Classes For Kids| Best Handwriting Classes For Kids | Best Coding Classes For Kids | How To Start My Own Abacus Classes At Home |How To Start Business Without Investment| How To Create Reading Habit In Kids | Part Time Business Ideas For Women | Best Phonics Classes For Kids | General knowledge Classes For Kids | Vedic Maths Teacher Training</span> <strong class="px-1 sitename">Abacus</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>

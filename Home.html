@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Index - Abacus </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        /* Reset and basic styling */
+     
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:  #fff;
+        }
+ 
+        .main {
+            padding: 20px;
+        }
+ 
+        .section-padding40 {
+            padding: 40px 0;
+        }
+ 
+        .section-tittle {
+            margin-bottom: 40px;
+        }
+ 
+        .section-tittle h2 {
+            font-size: 32px;
+            color: #333;
+            text-align: center;
+            animation: fadeInDown 1s ease-out;
+        }
+ 
+        /* Card styling */
+        .properties__card {
+            background: #fff;
+            border: 5px solid transparent; /* Border size */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.6s, border-color 0.3s ease; /* Add transition for border */
+            perspective: 1000px; /* Perspective for the 3D effect */
+            position: relative;
+        }
+ 
+        .properties__card:hover {
+            border-color: #964c98; /* Change border color on hover */
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+ 
+        .properties__img {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            transform-style: preserve-3d; /* Preserve the 3D effect */
+            transition: transform 0.6s; /* Transition for the flipping effect */
+        }
+ 
+        .properties__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            backface-visibility: hidden; /* Hide back face of the image */
+            position: absolute; /* Position absolute to stack images */
+            top: 0;
+            left: 0;
+        }
+ 
+        .properties__img img.back {
+            transform: rotateY(180deg); /* Rotate the back image */
+        }
+ 
+        .properties__card:hover .properties__img {
+            transform: rotateY(180deg); /* Flip the card on hover */
+        }
+ 
+        .properties__caption {
+            padding: 20px;
+            text-align: center;
+        }
+ 
+        .properties__caption h3 a {
+            font-size: 20px;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+ 
+        .properties__caption h3 a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: rgb(63, 5, 63);
+            transition: all 0.3s ease;
+        }
+ 
+        .properties__caption h3 a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+/* Card styling */
+.properties__card {
+            background: #fff;
+            border: 5px solid rgb(16, 16, 32); /* Updated border color to blue */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.6s, border-color 0.3s ease;
+            perspective: 1000px;
+            position: relative;
+        }
+        /* Responsive layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+ 
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+ 
+        .col-md-6, .col-lg-4 {
+            flex: 0 0 calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+ 
+        @media (max-width: 768px) {
+            .col-md-6, .col-lg-4 {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+ 
+        @media (max-width: 576px) {
+            .col-md-6, .col-lg-4 {
+                flex: 0 0 100%;
+            }
+        }
+ 
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+       
+    </style>
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <h1 class="sitename">Abacus</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/Home.html">Home</a></li>
+                    <li class="dropdown"><a href="/index.html"><span>Courses</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/Abacus.html">ABACUS</a></li>
+                            <li><a href="/VedicMaths.html">VEDIC MATHS</a></li>
+                            <li><a href="/Phonics.html">PHONICS</a></li>
+                            <li><a href="/Smartwrite.html">SMART WRITE</a></li>
+                            <li><a href="#">MAGIC TABLES</a></li>
+                            <li><a href="#">Kidzwiki</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/AboutUs.html">AboutUs</a></li>
+                    <li><a href="/Joinus.html">join-us</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                    <li><a href="/Blog.html">BLOGS</a></li>
+                    <li><a href="/Quizbyte.html">QuizByte</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="courses-area section-padding40">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle">
+                            <h2>Our Courses</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="properties__card">
+                            <div class="properties__img">
+                                <img src="assets/img/girl image.jpg" alt="Abacus" class="front">
+                                <img src="assets/img/girl image.jpg" alt="Abacus Back" class="back">
+                            </div>
+                            <div class="properties__caption">
+                                <h3><a href="#">Abacus</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="properties__card">
+                            <div class="properties__img">
+                                <img src="assets/img/31022.jpg" alt="VedicMaths" class="front">
+                                <img src="assets/img/31022.jpg" alt="VedicMaths Back" class="back">
+                            </div>
+                            <div class="properties__caption">
+                                <h3><a href="#">VedicMaths</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="properties__card">
+                            <div class="properties__img">
+                                <img src="assets/img/high-angle-kid-cheating-school-test.jpg" alt="SMART WRITE" class="front">
+                                <img src="assets/img/high-angle-kid-cheating-school-test.jpg" alt="SMART WRITE Back" class="back">
+                            </div>
+                            <div class="properties__caption">
+                                <h3><a href="#">SMART WRITE</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="properties__card">
+                            <div class="properties__img">
+                                <img src="assets/img/4041.jpg" alt="MAGIC TABLES" class="front">
+                                <img src="assets/img/4041.jpg" alt="MAGIC TABLES Back" class="back">
+                            </div>
+                            <div class="properties__caption">
+                                <h3><a href="#">MAGIC TABLES</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="properties__card">
+                            <div class="properties__img">
+                                <img src="assets/img/29072.jpg" alt="Kidzwiki" class="front">
+                                <img src="assets/img/29072.jpg" alt="Kidzwiki Back" class="back">
+                            </div>
+                            <div class="properties__caption">
+                                <h3><a href="#">Kidzwiki</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="properties__card">
+                            <div class="properties__img">
+                                <img src="assets/img/fidget-pop-it-toy-rainbow-color-antistress-fun-educational.jpg" alt="PHONICS" class="front">
+                                <img src="assets/img/fidget-pop-it-toy-rainbow-color-antistress-fun-educational.jpg" alt="PHONICS Back" class="back">
+                            </div>
+                            <div class="properties__caption">
+                                <h3><a href="#">PHONICS</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+
+        <div class="container footer-top">
+          <div class="row gy-4">
+            <div class="col-lg-5 col-md-12 footer-about">
+              <a href="index.html" class="logo d-flex align-items-center">
+                <span class="sitename">Abacus</span>
+              </a>
+              <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p> -->
+              <div class="social-links d-flex mt-4">
+                <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a> -->
+              </div>
+            </div>
+    
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <!-- <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Privacy policy</a></li> -->
+              </ul>
+            </div>
+    
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Our Top Courses</h4>
+              <ul>
+                <li><a href="#">Toddler Abacus</a></li>
+                <li><a href="#">Runner </a></li>
+                <li><a href="#">Sprinters</a></li>
+                <li><a href="#">Advance Level</a></li>
+                <li><a href="#">Grand Level</a></li>
+              </ul>
+            </div>
+    
+            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+              <h4>Contact </h4>
+              <!-- <p>A108 Adam Street</p>
+              <p>New York, NY 535022</p>
+              <p>United States</p>
+              <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p> -->
+            </div>
+    
+          </div>
+        </div>
+    
+        <div class="container copyright text-center mt-4">
+          <p>© <span>How to learn Abacus at home | Best Vedik Maths Classes For Kids| Best Handwriting Classes For Kids | Best Coding Classes For Kids | How To Start My Own Abacus Classes At Home |How To Start Business Without Investment| How To Create Reading Habit In Kids | Part Time Business Ideas For Women | Best Phonics Classes For Kids | General knowledge Classes For Kids | Vedic Maths Teacher Training</span> <strong class="px-1 sitename">Abacus</strong> <span>All Rights Reserved</span></p>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you've purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+    
+      </footer>
+
+    <!-- JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

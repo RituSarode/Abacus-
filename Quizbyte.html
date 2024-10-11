@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Index - Abacus </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+  
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com" rel="preconnect">
+   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+   <link
+     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+     rel="stylesheet">
+ 
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            background-color: #fff7f7;
+        }
+
+        h1.heading {
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+        #hero {
+            position: relative;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        #hero img {
+            max-width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        /* Container for QuizByte */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Styling the figure element for the image */
+        figure.QuizByte-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        figure.QuizByte-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            height: auto;
+        }
+
+        /* Content Section */
+        .QuizByte-content {
+            flex: 1;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .QuizByte-content h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .QuizByte-content p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn .text-1,
+        .btn .text-2 {
+            display: block;
+        }
+
+        .btn .text-2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            transition: 0.4s;
+            opacity: 0;
+        }
+
+        .btn:hover .text-1 {
+            transform: translateY(100%);
+            opacity: 0;
+            transition: 0.4s;
+        }
+
+        .btn:hover .text-2 {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* What We Offer Section */
+        .offer-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        h2.offer-heading {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .offer-heading span {
+            color: #ff7f00;
+        }
+
+        .offer-heading::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 80px;
+            background-color: #ff7f00;
+            border-radius: 10px;
+        }
+
+        .offer-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            height: 200px;
+            margin: 20px;
+            flex: 1;
+        }
+
+        .card:nth-child(2) {
+            background-color: #d0e7ff;
+        }
+
+        .card:nth-child(4) {
+            background-color: #ffe7d0;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* New Vision and Mission Cards */
+        .vision-mission-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+
+        .vision-card,
+        .mission-card {
+            background-color: #e0eaff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px; /* Increased width */
+            text-align: center;
+            transition: all 0.3s ease;
+            flex: 1; /* Allows cards to grow */
+        }
+
+        .mission-card {
+            background-color: #d7c5ff;
+        }
+
+        .vision-card img,
+        .mission-card img {
+            width: 100px; /* Increased icon size */
+            height: 100px; /* Increased icon size */
+        }
+
+        .vision-card h3,
+        .mission-card h3 {
+            font-size: 1.8rem; /* Increased heading size */
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .vision-card p,
+        .mission-card p {
+            font-size: 1.1rem; /* Increased text size */
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .QuizByte-content {
+                padding: 0;
+                margin-top: 20px;
+            }
+
+            figure.QuizByte-image img {
+                max-width: 100%;
+            }
+
+            .offer-container {
+                flex-direction: column;
+            }
+
+            .vision-mission-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+</style>
+
+</head>
+
+<body class="index-page">
+   <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <h1 class="sitename">Abacus</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/Home.html">Home</a></li>
+                    <li class="dropdown"><a href="/index.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/Abacus.html">ABACUS</a></li>
+                            <li><a href="/VedicMaths.html">VEDIC MATHS</a></li>
+                            <li><a href="/Phonics.html">PHONICS</a></li>
+                            <li><a href="/Smartwrite.html">SMART WRITE</a></li>
+                            <li><a href="#">MAGIC TABLES</a></li>
+                            <li><a href="#">Kidzwiki</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/AboutUs.html">About Us</a></li>
+                    <li><a href="/Joinus.html">JOIN US</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                    <li><a href="/Blog.html">BLOGS</a></li>
+                    <li><a href="/Quizbyte.html">QuizByte</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+            <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+        </div>
+    </header>
+
+    <main class="main">
+  <!-- Hero Section -->
+     <section id="hero" class="hero section">
+        <img src="/assets/img/pupil-dressed-teacher-holding-abacus-600nw-309236516.webp" alt="">
+        <div class="container text-center"  data-aos-delay="100">
+            <div class="row justify-content-center">
+                 <!-- <div class="col-lg-8">  -->
+                    <h1>Online quiz portal for hosting competitions</h1>
+                    <h2>ABACUS, VEDIC MATHS & many more</h2>
+                <!-- <a href="#about" class="btn-get-started">Read more</a>  -->
+              <!-- </div>  -->
+            </div>
+        </div>
+    </section> 
+
+
+    <!-- What We Offer Section -->
+    <section class="offer-section">
+        <h2 class="offer-heading">What <span>We</span> Offer</h2>
+        <div class="offer-container">
+            <div class="card">
+                <p>We offer a fully responsive & proven platform to host your competitions and regular exams online. We have a database of 50,000+ ABACUS & Vedic Maths questions.</p>
+            </div>
+            <div class="card">
+                <p>This is a web-based platform already in use by many institutions to conduct their online exams and host competitions specifically for ABACUS & Vedic Maths.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision and Mission Section -->
+    <section class="vision-mission-section">
+        <div class="vision-card">
+            <img src="https://t4.ftcdn.net/jpg/01/70/69/37/360_F_170693743_z3FEBFwAupuCZ9BEsAdYOetQFXPAkYIZ.jpg" alt="Vision Icon">
+            <h3>Vision</h3>
+            <p>We have a vision to offer an affordable, user-friendly, flexible and proven platform for conducting online exams and hosting competitions.</p>
+        </div>
+        <div class="mission-card">
+            <img src="https://b1826438.smushcdn.com/1826438/wp-content/uploads/2022/03/Main-Banner_new.png?lossy=1&strip=1&webp=1" alt="Mission Icon"> 
+            <h3>Mission</h3>
+            <p>We believe in having everyone the equal opportunity to succeed and grow. Our mission is to help individuals, institutes, and schools by extending this platform.</p>
+        </div>
+    </section>
+    
+
+</main>
+
+<footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Abacus</span>
+          </a>
+          <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p> -->
+          <div class="social-links d-flex mt-4">
+            <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a> -->
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+            <!-- <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li> -->
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Top Courses</h4>
+          <ul>
+            <li><a href="#">Toddler Abacus</a></li>
+            <li><a href="#">Runner </a></li>
+            <li><a href="#">Sprinters</a></li>
+            <li><a href="#">Advance Level</a></li>
+            <li><a href="#">Grand Level</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact </h4>
+          <!-- <p>A108 Adam Street</p>
+          <p>New York, NY 535022</p>
+          <p>United States</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+          <p><strong>Email:</strong> <span>info@example.com</span></p> -->
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>How to learn Abacus at home | Best Vedik Maths Classes For Kids| Best Handwriting Classes For Kids | Best Coding Classes For Kids | How To Start My Own Abacus Classes At Home |How To Start Business Without Investment| How To Create Reading Habit In Kids | Part Time Business Ideas For Women | Best Phonics Classes For Kids | General knowledge Classes For Kids | Vedic Maths Teacher Training</span> <strong class="px-1 sitename">Abacus</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
