@@ -9,9 +9,9 @@
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +24,12 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <title>AbacusMaster</title>
     <style>
+         .roboto-regular {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            }
+
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -49,17 +55,17 @@
             margin-bottom: 1.5rem;
         }
 
-        ul {
+        .benefits-list ul {
             list-style-type: none;
             padding-left: 0;
             font-size: 1.1rem;
         }
 
-        ul li {
+        .benefits-list ul li {
             margin-bottom: 0.5rem;
         }
 
-        ul li::before {
+       .benefits-list ul li::before {
             content: '•';
             color: #333;
             display: inline-block;
@@ -136,14 +142,15 @@
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
+                    <li><a href="/Home.html">Home</a></li>
                     <li class="dropdown"><a href="/index.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="/Abacus.html">ABACUS</a></li>
                             <li><a href="/VedicMaths.html">VEDIC MATHS</a></li>
                             <li><a href="/Phonics.html">PHONICS</a></li>
                             <li><a href="/Smartwrite.html">SMART WRITE</a></li>
-                            <li><a href="#">MAGIC TABLES</a></li>
-                            <li><a href="#">Kidzwiki</a></li>
+                            <li><a href="/MagicTables.html">MAGIC TABLES</a></li>
+                            <li><a href="/kidzwiki.html">Kidzwiki</a></li>
                         </ul>
                     </li>
                     <li><a href="/AboutUs.html">About Us</a></li>
