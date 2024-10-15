@@ -93,7 +93,7 @@
         .sidebar a:hover {
             background-color: #45a657;
         }
-
+       
         h1 {
             font-size: 2.5rem;
             color: #333;
@@ -135,6 +135,74 @@
             color: #333;
             margin-bottom: 0.8rem;
             }
+
+            * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px;
+}
+
+/* .header-box {
+    background-color:;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+} */
+
+.benefits-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.benefit-item {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.benefit-item::before {
+    content: "•";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    
+}
+
+@media (max-width: 768px) {
+    .benefits-container {
+        flex-direction: column;
+    }
+
+    .column {
+        margin: 0 0 20px 0;
+    }
+}
+
        
 
         .section-padding40 {
@@ -373,6 +441,27 @@
                     <li>The beads in the lower part are the Lower Beads or the Earth Beads.</li>
                     <li>The beads in the upper part are the Upper Beads or the Heaven Beads.</li>
                 </ul>
+
+                <h1>What are the advantages of Abacus ?</h1>
+                <img src="assets/img/AbacusAdvantages.jpg"
+                alt="Abacus and Kid Image">
+                
+                <div class="benefits-container">
+                    <div class="column">
+                        <ul class="benefits-list">
+                            <li class="benefit-item">Mental arithmetic Calculations</li>
+                            <li class="benefit-item">Improves Concentration skills</li>
+                            <li class="benefit-item">Improves imagination skills</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul class="benefits-list">
+                            <li class="benefit-item">Sharpen memory power</li>
+                            <li class="benefit-item">Boost confidence</li>
+                            <li class="benefit-item">Personality Development</li>
+                        </ul>
+                    </div>
+                </div>
             
 
             </div>
@@ -384,7 +473,9 @@
                 <a href="#">Abacus Features</a>
                 <a href="#">Mental Math</a>
                 <a href="#">FAQ</a>
-            </div>
+              </div>
+            <img src="assets/img/AbacusMasterBlog.jpg"
+              alt="Abacus and Kid Image"> 
         </div>
 
         <div class="courses-area section-padding40">
