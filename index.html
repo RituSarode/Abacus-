@@ -28,6 +28,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- =======================================================
   *  Name: Abacus
@@ -42,6 +43,15 @@
             font-weight: 400;
             font-style: normal;
             }
+            .swiper {
+      width: 100%;
+      height: 600px; /* Adjust height as needed */
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* This will maintain aspect ratio */
+    }
   </style>
 </head>
 
@@ -132,39 +142,28 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/diksha-y-abacus-01-1606207474.png" class="d-block w-100" alt="...">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/img/Abacusmainimg1.jpg" alt="Abacus Course">
         </div>
-        <div class="carousel-item">
-          <img src="https://t3.ftcdn.net/jpg/04/96/05/78/360_F_496057888_LLZwdYHu1rRoygax6WT4rF30LLnQJ8MO.jpg" class="d-block w-100" alt="...">
+        <div class="swiper-slide">
+          <img src="assets/img/Abacusmain3.jpg" alt="Coding Course">
         </div>
-        <div class="carousel-item">
-          <img src="https://img.freepik.com/free-vector/young-children-playing-with-abacus_1308-15595.jpg" class="d-block w-100" alt="...">
+        <div class="swiper-slide">
+          <img src="assets/img/Abacusmainimg2.jpg" alt="Math Games Course">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div><!-- /Hero Section -->
 
     <!-- About Section -->
 
-    </section><!-- /About Section -->
+    <!-- /About Section -->
 
     <!-- Why Us Section -->
     <section id="why-us" class="why-us section">
@@ -402,7 +401,22 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      loop: true, // Enable looping
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 </body>
 
 </html>

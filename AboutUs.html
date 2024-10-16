@@ -66,56 +66,100 @@
         }
 
         /* Benefits Section Styling */
-        .benefits-section {
-            padding: 60px 20px;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
+        .about-us-section {
+          background-color: rgb(243, 243, 208);
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Text color */
+    padding: 60px 20px; /* Top/Bottom and Left/Right padding */
+    text-align: center; /* Center-align text */
+    font-family: 'Arial', sans-serif; /* Font family */
+}
 
-        .benefits-section h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            position: relative;
-        }
 
-        .benefits-section h2::before {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 4px;
-            width: 80px;
-            border-radius: 10px;
-            background-color: #333;
-        }
+.about-us-section h1 {
+    font-size: 2.5em; /* Large heading */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
 
-        .benefits-section p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 20px;
-        }
+.about-us-section h3 {
+    font-size: 1.2em; /* Font size for the paragraph */
+    line-height: 1.6; /* Line height for readability */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center align the paragraph */
+    padding: 0 20px; /* Horizontal padding */
+}
+  
 
-        .benefits-list {
-            text-align: left;
-            margin: 0 auto;
-            max-width: 800px;
-        }
+/* Abacus Information Section */
+.abacus-info-section {
+        padding: 60px 20px; /* Top/Bottom and Left/Right padding */
+        background-color: #f9f9f9; /* Light background for contrast */
+    }
 
-        .benefits-list h3 {
-            font-size: 1.5rem;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
+    .abacus-info-section h2 {
+        font-size: 2em; /* Heading size */
+        margin-bottom: 20px; /* Spacing below the heading */
+        color: #333; /* Heading color */
+    }
 
-        .benefits-list p {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 1.5rem;
+    .abacus-info-section p {
+        font-size: 1.2em; /* Font size for the paragraph */
+        line-height: 1.6; /* Line height for readability */
+        color: #555; /* Paragraph color */
+    }
+
+    .img-fluid {
+        max-width: 100%; /* Responsive image */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 8px; /* Rounded corners for the image */
+    }
+
+    /* Added spacing between the two columns */
+    @media (min-width: 768px) {
+        .container > .col-lg-6 {
+            padding-left: 15px; /* Space on the left side */
+            padding-right: 15px; /* Space on the right side */
         }
-        
+    }
+
+
+/* Working Section */
+.working-section {
+    padding: 60px 20px;
+    background-color: rgb(243, 243, 208); /* Light background color */
+}
+
+.working-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.working-section p {
+    margin-bottom: 40px;
+}
+
+.working-section .row {
+    display: flex;
+    justify-content: center;
+}
+
+.working-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px; /* Spacing between image and text */
+}
+
+.working-section h3 {
+    margin: 10px 0 5px;
+    font-size: 1.5em; /* Team member name size */
+}
+
+.working-section p {
+    font-size: 1em; /* Team member role size */
+}
+
     </style>
 </head>
 
@@ -152,36 +196,82 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-        <img src="assets/img/depositphotos_590126138-stock-photo-attractive-kindergarten-teacher-using-abacus.jpg" alt="Kindergarten teacher using an Abacus">
+        <img src="assets/img/Aboutus.jpg" alt="Kindergarten teacher using an Abacus">
     </section>
 
     <!-- Benefits Section -->
-    <section class="benefits-section" id="benefits">
-        <div class="container">
-            <h1>About Us</h1>
-            <h3>Now Abacus has grown into a large team of passionate professionals who believe that every child is potentially smart. We believe that systematic training can make a huge impact on every child.</h3>
-            <h2>Benefits of Learning <span>Abacus</span></h2>
-            <div class="benefits-list">
-                <h3>High Calculation Speed with Accuracy</h3>
-                <p>Performing Mathematical calculations with speed & accuracy helps in performing well in exams. Time saved can be used in solving other problems.</p>
-
-                <h3>Makes Mathematics an Interesting Subject</h3>
-                <p>Teaching abacus is the best way to make maths an interesting subject because once kids start doing mental calculations, they fall in love with this subject.</p>
-
-                <h3>Develops Power to Concentrate</h3>
-                <p>Abacus exercises help students to improve their focus, which is critical for great academic performance across all subjects.</p>
-
-                <h3>Develops Observation & Visualization Power</h3>
-                <p>Abacus exercises improve observation skills, making students capable of analyzing situations quickly and responding efficiently.</p>
-
-                <h3>Develops Memory Power</h3>
-                <p>Abacus training enhances memory by combining concentration, observation, and imagination, allowing students to perform complex calculations effortlessly.</p>
-
-                <h3>Develops Confidence and Self-Esteem</h3>
-                <p>By excelling in speed and accuracy in calculations, students gain confidence and are motivated to excel in other fields.</p>
-            </div>
+    <section class="about-us-section" id="about">
+      <div class="container">
+          <h1>About Us</h1>
+          <h3>Welcome to our Abacus learning platform!
+             We are a dedicated team of passionate
+              professionals who believe that every
+               child is potentially smart. Our mission
+                is to empower children through systematic
+                 training in Abacus, fostering skills
+                  that make a significant impact on their
+                   academic journey and personal 
+                   development. Learning Abacus not only
+                    enhances mathematical abilities but
+                     also instills confidence, 
+                     concentration, and a love for 
+                     learning. By engaging in our 
+                     program, students will experience
+                      numerous benefits: improved 
+                      calculation speed and accuracy,
+                       a newfound interest in 
+                       mathematics, enhanced
+                        observational skills, better 
+                        memory retention, and increased
+                         self-esteem. We strive to 
+                         create a nurturing environment
+                         where every child can excel and
+                          develop a strong foundation for
+                           lifelong learning.</h3>
+      </div>
+  </section>
+  <!-- Abacus Organization Information Section -->
+  <section class="abacus-info-section" id="abacus-info">
+    <div class="container d-flex align-items-center">
+        <div class="col-lg-6 mb-4"> <!-- Added margin-bottom for spacing -->
+            <img src="assets/img/services.jpg" alt="Abacus Team" class="img-fluid">
         </div>
-    </section>
+        <div class="col-lg-6">
+            <h2 class="text-center">About Our Organization</h2> <!-- Changed to class for styling -->
+            <p class="text-center"> <!-- Centered paragraph text using a class -->
+                At Abacus, we pride ourselves on fostering a dynamic learning environment. Our team comprises experienced educators who are passionate about teaching children the art of Abacus calculation. We believe in the potential of every child and strive to cultivate their skills through innovative teaching methods. Join us in this journey of learning and discovery!
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Small People Working Section -->
+<section class="working-section" id="working">
+  <div class="container text-center">
+      <h2>Meet Our Team</h2>
+      <p>Our dedicated team is here to help your child succeed. They are trained professionals committed to providing the best learning experience.</p>
+      <div class="row">
+          <div class="col-lg-4 col-md-6">
+              <img src="assets/img/team/team-1.jpg" alt="Team Member 1" class="img-fluid">
+              <h3>John Doe</h3>
+              <p>Abacus Instructor</p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+              <img src="assets/img/team/team-2.jpg" alt="Team Member 2" class="img-fluid">
+              <h3>Jane Smith</h3>
+              <p>Math Specialist</p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+              <img src="assets/img/testimonials/testimonials-1.jpg" alt="Team Member 3" class="img-fluid">
+              <h3>Mark Johnson</h3>
+              <p>Education Consultant</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+  
+            
 
 
     <footer id="footer" class="footer dark-background">
