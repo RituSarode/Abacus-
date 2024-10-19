@@ -26,13 +26,14 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
-<style>
-    .roboto-regular {
+    <style>
+        .roboto-regular {
             font-family: "Roboto", sans-serif;
             font-weight: 400;
             font-style: normal;
-            }
-      body {
+        }
+
+        body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
@@ -76,7 +77,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 2rem;
-            gap: 3rem; /* Add gap between the content and image */
+            gap: 3rem;
+            /* Add gap between the content and image */
         }
 
         .content {
@@ -141,116 +143,167 @@
                 margin-top: 2rem;
             }
         }
-</style>
+
+        .image-container {
+            max-width: 40%;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            transition: all 1s ease-out;
+        }
+
+        
+        .slide-right {
+            transform: translateX(100px);
+        }
+
+       
+        .slide-left {
+            transform: translateX(-100px);
+        }
+
+        /* Animation class that will be added by JavaScript */
+        .animate {
+            opacity: 1;
+            transform: translateX(0) !important;
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                max-width: 60%;
+                margin-top: 2rem;
+            }
+        }
+    </style>
 </head>
 
 <body class="index-page"></body>
 
-    <header id="header" class="header d-flex align-items-center sticky-top">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center">
-            <a href="index.html" class="logo d-flex align-items-center me-auto">
-                <h1 class="sitename">Abacus</h1>
-            </a>
+<header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <h1 class="sitename">Abacus</h1>
+        </a>
 
-            <nav id="navmenu" class="navmenu">
-                <ul>
-                    <li><a href="/Home.html">Home</a></li>
-                    <li class="dropdown"><a href="/index.html"><span>Courses</span> <i
-                                class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li><a href="/Abacus.html">ABACUS</a></li>
-                            <li><a href="/VedicMaths.html">VEDIC MATHS</a></li>
-                            <li><a href="/Phonics.html">PHONICS</a></li>
-                            <li><a href="/Smartwrite.html">SMART WRITE</a></li>
-                            <li><a href="/MagicTables.html">MAGIC TABLES</a></li>
-                            <li><a href="/kidzwiki.html">Kidzwiki</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/AboutUs.html">AboutUs</a></li>
-                    <li><a href="/Joinus.html">join-us</a></li>
-                    <li><a href="/Contact.html">Contact</a></li>
-                    <li><a href="/Blog.html">BLOGS</a></li>
-                    <li><a href="/Quizbyte.html">QuizByte</a></li>
-                </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-        </div>
-    </header>
-    <section id="hero" class="hero section">
-        <img src="/assets/img/gk img.jpg" alt="Magic Tables Image">
-    </section>
-
-    <div class="container">
-        <div class="content">
-            <h1>Why General Knowledge is important for kids</h1>
-            <p>
-                Today, general knowledge plays an essential role in defining one's growth and success. No matter what we
-                choose to do in life, the key is to learn and gain more knowledge in different fields. One needs to go
-                beyond academics to excel in other areas. A kid's achievement depends on how much he or she is getting
-                from the surroundings.
-            </p>
+        <nav id="navmenu" class="navmenu">
             <ul>
-                <li>Competing in GK quizzes is an enjoyable way to make kids look ahead to it.</li>
-                <li>Public speaking will be easier.</li>
-                <li>Improved mental processes.</li>
-                <li>Improved performance in General Knowledge.</li>
+                <li><a href="/Home.html">Home</a></li>
+                <li class="dropdown"><a href="/index.html"><span>Courses</span> <i
+                            class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li><a href="/Abacus.html">ABACUS</a></li>
+                        <li><a href="/VedicMaths.html">VEDIC MATHS</a></li>
+                        <li><a href="/Phonics.html">PHONICS</a></li>
+                        <li><a href="/Smartwrite.html">SMART WRITE</a></li>
+                        <li><a href="/MagicTables.html">MAGIC TABLES</a></li>
+                        <li><a href="/kidzwiki.html">Kidzwiki</a></li>
+                    </ul>
+                </li>
+                <li><a href="/AboutUs.html">AboutUs</a></li>
+                <li><a href="/Joinus.html">join-us</a></li>
+                <li><a href="/Contact.html">Contact</a></li>
+                <li><a href="/Blog.html">BLOGS</a></li>
+                <li><a href="/Quizbyte.html">QuizByte</a></li>
             </ul>
-        </div>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+    </div>
+</header>
+<section id="hero" class="hero section">
+    <img src="/assets/img/gk img.jpg" alt="Magic Tables Image">
+</section>
 
-        <div class="image-container">
-            <img src="assets/img/knowledge-tree--image_1042962.jpg" alt="General Knowledge Image">
-        </div>
+<div class="container">
+    <div class="content">
+        <h1>Why General Knowledge is important for kids</h1>
+        <p>
+            Today, general knowledge plays an essential role in defining one's growth and success. No matter what we
+            choose to do in life, the key is to learn and gain more knowledge in different fields. One needs to go
+            beyond academics to excel in other areas. A kid's achievement depends on how much he or she is getting
+            from the surroundings.
+        </p>
+        <ul>
+            <li>Competing in GK quizzes is an enjoyable way to make kids look ahead to it.</li>
+            <li>Public speaking will be easier.</li>
+            <li>Improved mental processes.</li>
+            <li>Improved performance in General Knowledge.</li>
+        </ul>
     </div>
 
-    <div class="container">
+    <div class="image-container slide-right">
+        <img src="assets/img/knowledge-tree--image_1042962__2_-removebg-preview.png" alt="General Knowledge Image">
+    </div>
+</div>
 
-        <div class="image-container">
-            <img src="assets/img/boy-holding-abacus-air-balloon-img.jpg" alt="General Knowledge Image">
-        </div>
+<div class="container">
 
-        <div class="content">
-            <h1>About KidzWiki</h1>
-            <p>This is a new course aimed at enhancing general knowledge and analytical reasoning skill of school going students, 
-                so that they are well prepared for appearing competitive exams. Following are the main features of this course
-            </p>
-            <ul>
-                <li>Self learn. We provide two books for registered students to prepare themselves</li>
-                <li>Unlimited online practice. We offer unlimited questions database for our registered students</li>
-                <li>Complimentary master classes for our registered students</li>
-                <li>Yearly competition amongst registered students with huge prizes</li>
-                <li>On demand weekly paid classes for competition preparation</li>
-            </ul>
-        </div>   
+    <div class="image-container  slide-left">
+        <img src="assets/img/boy-holding-abacus-air-balloon-img.jpg" alt="General Knowledge Image">
     </div>
 
-    <div class="container">
-        <div class="content">
-            <h1>Course content</h1>
-            <p>
-                 This course covers following areas for enhancing general knowledge of the students
-            </p>
-            <ul>
-                <li>World information</li>
-                <li>Analytical skills</li>
-                <li>Reasoning skills</li>
-                <li>Science & Maths</li>
-                <li>History & Geography</li>
-                <li>Riddles</li>
-                <li>Money, monuments, politics, inventions, sports, personality, culture, countries, vocabulary, measurements, etc.</li>
-                <li>Many more...</li>
-            </ul>
-        </div>
+    <div class="content">
+        <h1>About KidzWiki</h1>
+        <p>This is a new course aimed at enhancing general knowledge and analytical reasoning skill of school going
+            students,
+            so that they are well prepared for appearing competitive exams. Following are the main features of this
+            course
+        </p>
+        <ul>
+            <li>Self learn. We provide two books for registered students to prepare themselves</li>
+            <li>Unlimited online practice. We offer unlimited questions database for our registered students</li>
+            <li>Complimentary master classes for our registered students</li>
+            <li>Yearly competition amongst registered students with huge prizes</li>
+            <li>On demand weekly paid classes for competition preparation</li>
+        </ul>
+    </div>
+</div>
 
-        <div class="image-container">
-            <img src="assets/img/knowledge-tree--image_1042962.jpg" alt="General Knowledge Image">
-        </div>
+<div class="container">
+    <div class="content">
+        <h1>Course content</h1>
+        <p>
+            This course covers following areas for enhancing general knowledge of the students
+        </p>
+        <ul>
+            <li>World information</li>
+            <li>Analytical skills</li>
+            <li>Reasoning skills</li>
+            <li>Science & Maths</li>
+            <li>History & Geography</li>
+            <li>Riddles</li>
+            <li>Money, monuments, politics, inventions, sports, personality, culture, countries, vocabulary,
+                measurements, etc.</li>
+            <li>Many more...</li>
+        </ul>
     </div>
 
+    <div class="image-container slide-right">
+        <img src="assets/img/knowledge-tree--image_1042962.jpg" alt="General Knowledge Image">
+    </div>
+</div>
 
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                // Optional: Stop observing after animation
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2,  // Trigger when 20% of element is visible
+        rootMargin: '50px'  // Start animation slightly before element comes into view
+    });
+
+    // Observe all image containers
+    document.querySelectorAll('.image-container').forEach(container => {
+        observer.observe(container);
+    });
+</script>
 
 
 
 </body>
 
 </html>
-
